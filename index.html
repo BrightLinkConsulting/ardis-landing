@@ -1837,7 +1837,7 @@ function openDemoModal(e) {
   const frame = document.getElementById('ghlCalendarFrame');
   const placeholder = document.getElementById('calendarPlaceholder');
   // Show placeholder if GHL URL not yet set, hide iframe; otherwise show iframe
-  if (frame.src.includes('https://api.leadconnectorhq.com/widget/booking/Vl2mxnSkXUDdLJqKphWi') || frame.src === window.location.href) {
+  if (frame.src.includes('YOUR_GHL_CALENDAR_EMBED_URL') || frame.src === window.location.href) {
     frame.style.display = 'none';
     placeholder.style.display = 'flex';
   } else {
