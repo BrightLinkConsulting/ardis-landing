@@ -466,6 +466,18 @@ nav {
 .mini-file-status.indexed { background: #ECFDF5; color: #059669; }
 .mini-file-status.processing { background: #FFFBEB; color: #D97706; }
 
+/* ─── CRED SECTION INLINE-FIX CLASSES ──────────────────────── */
+.cred-tiles {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px; margin-top: 12px;
+}
+.sam-badge-row {
+  display: flex; align-items: center; gap: 16px;
+}
+.replaces-row {
+  display: flex; justify-content: space-between; align-items: center; font-size: 13px;
+}
+
 /* ─── SECTIONS ─────────────────────────────────────────────────── */
 section { position: relative; }
 .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -772,6 +784,8 @@ footer {
   .steps-row { grid-template-columns: 1fr 1fr; }
   .steps-row::before { display: none; }
   .cred-grid { grid-template-columns: 1fr; }
+  .cred-tiles { grid-template-columns: 1fr 1fr 1fr; }
+  .sam-badge-row { flex-wrap: wrap; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   nav .nav-links { display: none; }
 }
@@ -781,6 +795,9 @@ footer {
   .trust-grid { grid-template-columns: 1fr; }
   .steps-row { grid-template-columns: 1fr; }
   .stat-bar { grid-template-columns: 1fr; }
+  .cred-tiles { grid-template-columns: 1fr; }
+  .sam-badge-row { flex-direction: column; align-items: flex-start; }
+  .replaces-row { flex-direction: column; align-items: flex-start; gap: 2px; }
   .footer-top { grid-template-columns: 1fr; }
 }
 
@@ -1582,29 +1599,29 @@ footer {
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 22px;margin-top:20px;">
           <div style="font-size:11px;font-weight:600;color:var(--blue-300);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">What ARDIS Replaces</div>
           <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+            <div style="" class="replaces-row">
               <span style="color:var(--blue-200);">Manual quarterly reporting (staff hours)</span>
               <span style="color:var(--white);font-weight:600;">~12–20 hrs saved</span>
             </div>
             <div style="height:1px;background:rgba(255,255,255,0.06);"></div>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+            <div style="" class="replaces-row">
               <span style="color:var(--blue-200);">Disconnected spreadsheet tools</span>
               <span style="color:var(--white);font-weight:600;">1 unified system</span>
             </div>
             <div style="height:1px;background:rgba(255,255,255,0.06);"></div>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+            <div style="" class="replaces-row">
               <span style="color:var(--blue-200);">Lost institutional knowledge at staff turnover</span>
               <span style="color:var(--white);font-weight:600;">Fully preserved</span>
             </div>
             <div style="height:1px;background:rgba(255,255,255,0.06);"></div>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+            <div style="" class="replaces-row">
               <span style="color:var(--blue-200);">Audit prep scrambles</span>
               <span style="color:var(--white);font-weight:600;">Always ready</span>
             </div>
           </div>
         </div>
         <!-- SAM.gov primary badge -->
-        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(147,197,253,0.25);border-radius:12px;padding:20px 22px;margin-top:16px;display:flex;align-items:center;gap:16px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(147,197,253,0.25);border-radius:12px;padding:20px 22px;margin-top:16px;" class="sam-badge-row">
           <!-- SAM.gov SVG mark -->
           <div style="flex-shrink:0;width:56px;height:56px;background:linear-gradient(145deg,#1a3a6e,#0f2147);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(147,197,253,0.3);">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1638,7 +1655,7 @@ footer {
           </div>
         </div>
         <!-- Secondary credential tiles -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px;">
+        <div class="cred-tiles">
           <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 12px;text-align:center;">
             <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--blue-300);line-height:1;margin-bottom:4px;">541613</div>
             <div style="font-size:10px;color:var(--blue-200);">NAICS Code</div>
